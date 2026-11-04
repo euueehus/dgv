@@ -56,18 +56,18 @@
             label1.AutoSize = true;
             label1.Location = new Point(181, 65);
             label1.Name = "label1";
-            label1.Size = new Size(61, 23);
+            label1.Size = new Size(46, 23);
             label1.TabIndex = 1;
-            label1.Text = "label1";
+            label1.Text = "搜尋";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(181, 147);
             label2.Name = "label2";
-            label2.Size = new Size(61, 23);
+            label2.Size = new Size(82, 23);
             label2.TabIndex = 2;
-            label2.Text = "label2";
+            label2.Text = "狀態篩選";
             // 
             // textBox1
             // 
@@ -82,18 +82,18 @@
             label3.AutoSize = true;
             label3.Location = new Point(656, 145);
             label3.Name = "label3";
-            label3.Size = new Size(61, 23);
+            label3.Size = new Size(46, 23);
             label3.TabIndex = 5;
-            label3.Text = "label3";
+            label3.Text = "時間";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(966, 145);
             label4.Name = "label4";
-            label4.Size = new Size(61, 23);
+            label4.Size = new Size(28, 23);
             label4.TabIndex = 6;
-            label4.Text = "label4";
+            label4.Text = "到";
             // 
             // dateTimePicker1
             // 
@@ -108,6 +108,7 @@
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(170, 30);
             dateTimePicker2.TabIndex = 8;
+            dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged;
             // 
             // checkBox1
             // 
@@ -118,6 +119,7 @@
             checkBox1.TabIndex = 9;
             checkBox1.Text = "checkBox1";
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // button1
             // 
