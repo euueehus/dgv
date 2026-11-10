@@ -10,7 +10,7 @@ namespace dgv
             InitializeComponent();
         }
         BcAnmContext database = new BcAnmContext();
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             var q = database.Orders.AsQueryable();
@@ -56,6 +56,7 @@ namespace dgv
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.Items.Clear();
             comboBox1.Items.Add("全部");
             comboBox1.Items.Add("正常");
@@ -72,6 +73,12 @@ namespace dgv
                 更動時間 = a.UpdateDateTime,
 
             }).ToList();
+            var btn = new DataGridViewButtonColumn();
+            btn.Name = "detail";
+            btn.HeaderText = "詳細狀態";
+            btn.Text = "按鈕欄位";
+            btn.UseColumnTextForButtonValue = true;
+            dataGridView1.Columns.Add(btn);
 
         }
 
@@ -98,6 +105,22 @@ namespace dgv
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void saveFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Form2 list = new Form2();
+            list.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
         }
         //private void com
     }

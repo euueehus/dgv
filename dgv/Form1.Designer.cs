@@ -39,6 +39,9 @@
             checkBox1 = new CheckBox();
             button1 = new Button();
             comboBox1 = new ComboBox();
+            saveFileDialog1 = new SaveFileDialog();
+            button2 = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -50,6 +53,7 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(1458, 392);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentDoubleClick += dataGridView1_CellContentDoubleClick;
             // 
             // label1
             // 
@@ -140,11 +144,36 @@
             comboBox1.TabIndex = 11;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
+            // saveFileDialog1
+            // 
+            saveFileDialog1.FileOk += saveFileDialog1_FileOk;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(12, 12);
+            button2.Name = "button2";
+            button2.Size = new Size(112, 60);
+            button2.TabIndex = 12;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(12, 91);
+            button3.Name = "button3";
+            button3.Size = new Size(112, 65);
+            button3.TabIndex = 13;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(11F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1741, 605);
+            Controls.Add(button3);
+            Controls.Add(button2);
             Controls.Add(comboBox1);
             Controls.Add(button1);
             Controls.Add(checkBox1);
@@ -177,5 +206,8 @@
         private CheckBox checkBox1;
         private Button button1;
         private ComboBox comboBox1;
+        private SaveFileDialog saveFileDialog1;
+        private Button button2;
+        private Button button3;
     }
 }
